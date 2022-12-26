@@ -1,0 +1,55 @@
+@charset "UTF-8";
+.corss {
+  border: solid 2px;
+  width: 200px;
+  height: 200px;
+  position: relative;
+  background-color: #FBE251;
+}
+.corss:hover .line1 {
+  transform: translateX(-50%) translateY(-50%) rotate(45deg);
+  width: 170px;
+}
+.corss:hover .line2 {
+  transform: translateX(-50%) translateY(-50%) rotate(-45deg);
+  width: 170px;
+}
+.corss .line1, .corss .line2 {
+  width: 150px;
+  height: 10px;
+  background-color: #ADA142;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transition-duration: 0.5s;
+}
+.corss .line1 {
+  transform: translateX(-50%) translateY(-250%);
+}
+.corss .line2 {
+  transform: translateX(-50%) translateY(150%);
+}
+
+.block {
+  border: solid 2px;
+  width: 300px;
+  height: 300px;
+  padding: 20px;
+  margin-top: 10px;
+  font-family: 微軟正黑體;
+  background-color: #4D5139;
+}
+.block:hover h1, .block:hover p {
+  opacity: 1;
+  top: 0px;
+}
+.block h1, .block p {
+  position: relative;
+  top: 20px;
+  opacity: 0;
+  color: #B5CAA0;
+  transition-duration: 0.6s;
+}
+.block p {
+  transition-delay: 0.2s;
+}

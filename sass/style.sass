@@ -1,0 +1,57 @@
+.corss
+  border: solid 2px 
+  width: 200px
+  height: 200px
+  position: relative
+  background-color: #FBE251
+  
+  &:hover
+    & .line1,& .line2
+  
+    & .line1
+      transform: translateX(-50%) translateY(-50%) rotate(45deg) // 選轉角度
+      width: 170px
+    & .line2
+      transform: translateX(-50%) translateY(-50%) rotate(-45deg) // 選轉角度
+      width: 170px  
+  
+  
+  & .line1,& .line2
+    // border: solid 2px 
+    width: 150px
+    height: 10px
+    background-color: #ADA142
+    position: absolute
+    top: 50%
+    left: 50%    
+    transition-duration: 0.5s
+  & .line1
+    transform: translateX(-50%) translateY(-250%) //上面那條線
+    
+  & .line2
+    transform: translateX(-50%) translateY(150%)  //下面那條線
+      
+.block
+  border: solid 2px 
+  width: 300px
+  height: 300px
+  padding: 20px
+  margin-top: 10px
+  font-family: 微軟正黑體
+  background-color: #4D5139
+  
+  &:hover
+    & h1,& p
+      opacity: 1 //透明度
+      top: 0px
+    
+  & h1,& p
+    position: relative // 就它原本顯示的位置，使用CSS屬性，如 top、right、bottom、left可做到「顯示位置的偏移」，而預設的static則無法
+    top: 20px
+    opacity: 0
+    color: #B5CAA0 // 文字顏色
+    transition-duration: 0.6s //動畫顯示速度
+  & p 
+    transition-delay: 0.2s // 動畫延遲
+    
+  
